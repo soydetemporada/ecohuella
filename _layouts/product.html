@@ -1,7 +1,8 @@
 {% assign lang_suffix = '' %}
 {% if site.lang != 'es' %}
   {% assign lang_suffix = "_" | append: site.lang %}
-{% endif %} {% assign name_key = "name" | append: lang_suffix %}
+{% endif %}
+{% assign name_key = "name" | append: lang_suffix %}
 {% assign description_key = "description" | append: lang_suffix %}
 
 <!DOCTYPE html>
@@ -58,7 +59,7 @@
           <div class="col-md-12 production-step">
             <div style="margin:0 auto;text-align:center">
               <img
-                src="https://robohash.org/{{product_data[name_key]}}"
+                src="/img/icons/{{product_id}}-semilla.png"
                 height="128"
                 width="128"
               />
@@ -92,7 +93,7 @@
           <div class="col-md-12 production-step">
             <div style="margin:0 auto;text-align:center">
               <img
-                src="https://robohash.org/{{product_data[name_key]}}-product"
+                src="/img/icons/{{product_id}}-transporte.png"
                 height="128"
                 width="128"
               />
@@ -129,9 +130,9 @@
           <div class="col-md-12 production-step">
             <div style="margin:0 auto;text-align:center">
               <img
-                src="https://robohash.org/{{product_data[name_key]}}-plate"
-                height="128"
-                width="128"
+                src="/img/icons/{{product_id}}-plato.png"
+                height="256"
+                width="256"
               />
             </div>
           </div>
@@ -161,7 +162,7 @@
               </div>
             </div>
           </div>
-        </div>        
+        </div>
       </div>
     </section>
 
