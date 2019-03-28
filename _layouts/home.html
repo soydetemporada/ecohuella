@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body id="page-top" class="index">
+    {% include nav.html %} {% include product_grid.html %} {% include
+    footer.html %} {% include js.html %} {% include js_search.html %}
+    <script>
+      $(document).ready(function() {
+        var products = [];
+        {% for product in site.products %}
+          {% assign product_id = product.id | replace: '/products/',''%}
+          products.push('{{product_id}}');
+        {% endfor %}
+        var questions = {{site.data.questions | jsonify}};
+        var product_id = Math.floor(Math.random() * products.length);
+        var question = questions[products[product_id]];
+        question = question.data[Math.floor(Math.random() * question.data.length)];
+        console.log(question.range);
+        $('#question').text(question.question);
+        $( "#slider-value" ).text( (question.range[1] - question.range[0])/ 2 );
+        $( "#unit" ).text(question.unit);
+        $( "#answer" ).html(question.answer);
+
+        $("#answer-button").on('click',function(){
+          $("#product").show('slow');
+        });
+
+        $( "#slider-range-max" ).slider({
+          range: 'max',
+          min: question.range[0],
+          max: question.range[1],
+          value: question.range[0], //(question.range[1] - question.range[0])/ 2,
+          slide: function( event, ui ) {
+            $( "#slider-value" ).text( ui.value );
+          },
+          change:function(event,ui){
+            $("#answer-note").show("slow");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

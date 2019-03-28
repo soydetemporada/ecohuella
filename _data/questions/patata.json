@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "question": "¿Cuánto CO2 emite la producción de un kilo de patatas?",
+      "range": [1000, 10000],
+      "unit": "gC02 eq",
+      "answer": "La producción total de un kilo de patatas emite 549.07 gr CO2. Divididos en dos fases::<ul><li>Fase local: 212.07 gr CO2/kg</li><li>Fase industrial: 337 gr CO2/kg</li></ul> Según un estudio de la Universidad Politécnica de Valencia: Huella de carbono generada por el consumo de frutas y verduras en España"
+    },
+    {
+      "question": "¿Cuánta agua crees que se necesita para producir un kilo de patatas?",
+      "range": [10, 1000],
+      "unit": "lt",
+      "answer": "El consumo de agua que se necesita para producir 1 kg de patatas de forma industrial es de…….., mientras que consumirlo de temporada es de ……. Existe una diferencia de ……, según el estudio de Water footprint"
+    },
+    {
+      "question": "¿Cuándo crees que es más barato comprar un kilo de patatas?",
+      "range": [0, 1],
+      "unit": "Temporada",
+      "answer": "La PATATA  cuesta 1.06€ en temporada y 1.02€  fuera de temporada. Encontramos una diferencia de 4 céntimos de media, según los datos datos del observatorio de precios del Ministerio de Agricultura del año 2018."
+    }
+  ]
+}

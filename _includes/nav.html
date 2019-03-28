@@ -1,0 +1,65 @@
+   <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% tl home %}">{{ site.title }}</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll active">
+                        <a href="#portfolio">{% t global.menu.calendar %}</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="{% tl porque %}">{% t global.menu.porque %}</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="{% tl research %}">{% t global.menu.research%}</a>
+                    </li>
+                    <!--
+                    <li class="page-scroll">
+                        <a href="{% tl recipes %}">{% t global.menu.recipes %}</a>
+                    </li>
+                    -->
+                    <li class="page-scroll">
+                        <a href="{% tl faq %}">{% t global.menu.faq %}</a>
+                    </li>
+                    <li>
+                      <select id="lang" data-current="{{site.lang}}">
+                        {%for lang in site.languages %}
+                          {% if lang == site.lang %}
+                            <option selected disabled>{{lang | upcase }}</option>
+                          {% else %}
+                            {% assign lang_suffix = '' %}
+                            {% assign lang_prefix = '' %}
+                            {% if lang != 'es' %}
+                              {% assign lang_suffix = "_" | append: lang %}
+                              {% assign lang_prefix = "/" | append: lang  %}
+                            {% endif %}
+                            {% assign permalink_key = "permalink" | append: lang_suffix %}
+                            {% if page[permalink_key] %}
+                              <option value="{{ page[permalink_key] | prepend: lang_prefix }}">{{lang | upcase }}</option>
+                            {% else %}
+                              <option value="{{ page.url | prepend: lang_prefix }}">{{lang | upcase }}</option>
+                            {% endif %}
+                          {% endif %}
+                        {% endfor %}
+                      </select>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>

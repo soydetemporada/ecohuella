@@ -1,0 +1,4 @@
+---
+title: Tomate
+layout: product
+---

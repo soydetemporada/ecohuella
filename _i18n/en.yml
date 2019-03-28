@@ -1,0 +1,60 @@
+global:
+  header: "What can I eat this month?"
+  contact_us: "Contact us"
+  help_us: "Help us"
+  share_it: "Share it"
+  license: "Creative Commons License"
+  about: About
+  contact: Contact
+  menu:
+    calendar: Calendar
+    porque: "Why?"
+    research: Investigation
+    faq: FAQ
+    recipes: Recipes
+
+titles:
+  calendar: Calendar
+  porque: "Why?"
+  research: "Agricultura familiar: el coste de mantener la tradición y la tierra"
+  faq: FAQ
+  recipes: Recipes
+  about: About
+  help_us: "Help us"
+  contact: Contact
+  cookies: Cookies
+  petition: "para tener calendarios fiables"
+
+home:
+  months: "January, February, March, April, May, June, July, August, September, October, November, December"
+  filter: "Filter by product"
+  in_out: "Product starting or finishing season"
+  loading: "Loading..."
+  out_of_season: "NOT IN SEASON"
+  contact:
+    title: "¿Have you seen an error in the calendar?"
+    subtitle: "We want it to be as reliable as possible, don't hesitate to let us know."
+
+product:
+  summary: "In a few words"
+  growing_time: "Growing time"
+  top_3: "Top 3 of the producing provinces"
+  source_top: "Source: Ministry of Agriculture (2015). Statistical Yearbook."
+  import_export: "How much is imported, how much is exported?"
+  source_import_export: "Source: Ministry of Economy (2015). Includes production in greenhouses."
+
+contact:
+  name: "Name"
+  email: "Email address"
+  message: "Message"
+
+colaborators:
+  coordination: "Coordination and Design"
+  research: "Investigation and Writing"
+  development: "Programming"
+  design: "UX Design"
+  data_analysis: "Data Analysis"
+
+cookies:
+  cookie_banner: "Cookies are always in season, and this website uses two or three"
+  cookie_info: "More info"

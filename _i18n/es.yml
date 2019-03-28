@@ -1,0 +1,61 @@
+global:
+  header: "De la Semilla a tu Plato"
+  contact_us: "Contáctanos"
+  help_us: Colabora
+  share_it: "Compártelo"
+  license: "Licencia Creative Commons"
+  about: Acerca
+  contact: Contacto
+  vegetables_calendar: "Calendario de verduras"
+  menu:
+    calendar: Inicio
+    research: Investigación
+    faq: FAQ
+
+titles:
+  calendar: Buscador
+  porque: "¿Por qué?"
+  research: "Agricultura familiar: el coste de mantener la tradición y la tierra"
+  faq: FAQ
+  recipes: Recetas
+  about: Acerca
+  help_us: Colabora
+  contact: Contacto
+  cookies: Cookies
+  petition: "para tener calendarios fiables"
+
+contact:
+  name: "Nombre"
+  email: "Dirección de correo"
+  message: "Mensaje"
+
+home:
+  months: "Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre"
+  filter: "Filtrar por producto"
+  in_out: "Producto entrando o saliendo de temporada"
+  loading: "Cargando..."
+  out_of_season: "FUERA DE TEMPORADA"
+  contact:
+    title: "¿Has visto algún error en el calendario?"
+    subtitle: "Queremos que sea lo más fiable posible, no dudes en avisarnos."
+  press:
+    title: "Hablan de nosotros"
+
+product:
+  summary: "En pocas palabras"
+  growing_time: "Tiempo de cultivo"
+  top_3: "Top 3 de las provincias productoras"
+  source_top: "Fuente: Ministerio de Agricultura (2015). Anuario de Estadística."
+  import_export: "¿Cuánto se importa, cuánto se exporta?"
+  source_import_export: "Fuente: Ministerio de Economía (2015). Incluye producción en invernaderos."
+
+colaborators:
+  coordination: "Coordinación y Diseño"
+  research: "Investigación y Redacción"
+  development: "Programación"
+  design: "Diseño UX"
+  data_analysis: "Análisis de datos"
+
+cookies:
+  cookie_banner: "Las cookies siempre están de temporada, y este sitio usa dos o tres"
+  cookie_info: "Más información"

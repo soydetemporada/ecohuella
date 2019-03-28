@@ -1,0 +1,63 @@
+global:
+  header: "Què puc menjar aquest mes?"
+  contact_us: "Contacte"
+  help_us: Col·labora
+  share_it: "Comparteix-ho"
+  license: "Llicència Creative Commons"
+  about: Sobre
+  contact: Contacte
+  vegetables_calendar: "Calendari de verdures"
+  menu:
+    calendar: Calendari
+    porque: Per què?
+    research: Investigació
+    faq: FAQ
+    recipes: Receptes
+
+titles:
+  calendar: Cercador
+  porque: Per què?
+  research: "Agricultura familiar: el cost de mantenir la tradició i la terra"
+  faq: FAQ
+  recipes: Receptes
+  about: Sobre
+  help_us: Col·labora
+  contact: Contacte
+  cookies: Cookies
+  petition: "para tener calendarios fiables"
+
+home:
+  months: "Gener,Febrer,Març,Abril,Maig,Juny,Juliol,Agost,Setembre,Octubre,Novembre,Desembre"
+  filter: "Filtrar per producte"
+  in_out: "Producte entrant o sortint de temporada"
+  loading: "Carregant..."
+  out_of_season: "FORA DE TEMPORADA"
+  contact:
+    title: "Has vist algun error al calendari?"
+    subtitle: "Volem que sigui el més fiable possible, no dubtis a avisar-nos."
+  press:
+    title: "Parlen de nosaltres"
+
+product:
+  summary: "En poques paraules"
+  growing_time: "Temps de cultiu"
+  top_3: "Top 3 de les províncies productores"
+  source_top: "Font: Ministeri d'Agricultura (2015). Anuari d'Estadística."
+  import_export: "Quant s'importa, quant s'exporta?"
+  source_import_export: "Font: Ministeri d'Economia (2015). Inclou producció en hivernacles."
+
+colaborators:
+  coordination: "Coordinació i Disseny"
+  research: "Investigació i Redacció"
+  development: "Programació"
+  design: "Disseny UX"
+  data_analysis: "Anàlisi de dades"
+
+contact:
+  name: Nom
+  email: "Correu electrònic"
+  message: Missatge
+
+cookies:
+  cookie_banner: "Les cookies sempre estan de temporada, i aquest lloc usa dos o tres"
+  cookie_info: "Més informació"
