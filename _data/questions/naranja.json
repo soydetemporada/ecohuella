@@ -4,19 +4,19 @@
       "question": "¿Cuánto CO2 emite la producción de un kilo de naranjas?",
       "range": [1000, 10000],
       "unit": "gC02 eq",
-      "answer": "La producción total de un kilo de naranjas emite 467gr Co2. Divididos en dos fases:<ul><li>Fase local: 191 gr CO2/kg</li><li>Fase industrial: 276 gr CO2/kg</li></ul> Según el estudio “Evaluación ambiental del tratamiento poscosecha de la clementina. Huella de carbono” realizado por especialistas del grupo ASPA"
+      "answer": "La producción total de un kilo de naranjas emite 467gr Co2. Divididos en dos variables:<ul><li>Agricultura local: 191 gr CO2/kg</li><li>Agricultura industrial: 276 gr CO2/kg</li></ul> Según el estudio “Evaluación ambiental del tratamiento poscosecha de la clementina. Huella de carbono” realizado por especialistas del grupo ASPA"
     },
     {
       "question": "¿Cuánta agua crees que se necesita para producir un kilo de naranjas?",
       "range": [10, 1000],
       "unit": "lt",
-      "answer": "El consumo de agua que se necesita para producir 1 kg de naranjas de forma industrial es de…….., mientras que consumirlo de temporada es de ……. Existe una diferencia de ……, según el estudio de Water footprint"
+      "answer": "El consumo de agua que se necesita para producir 1 kg de naranjas es de 560 Lt/Kg, según el estudio de Water footprint de 2011"
     },
     {
       "question": "¿Cuándo crees que es más barato comprar un kilo de naranjas?",
-      "range": [0, 1],
+      "range": ["Temporada", "Fuera de Temporada"],
       "unit": "Temporada",
-      "answer": "La NARANJA  cuesta 1.57€ en temporada y 1.76€  fuera de temporada. Encontramos una diferencia de 19 céntimos de media, según los datos datos del observatorio de precios del Ministerio de Agricultura del año 2018."
+      "answer": "La NARANJA  cuesta 1.57€ en temporada y 1.76€  fuera de temporada. Encontramos una diferencia de 19 céntimos de media, según los datos del Observatorio de Precios del Ministerio de Agricultura del año 2018."
     }
   ]
 }

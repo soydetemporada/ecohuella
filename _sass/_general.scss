@@ -228,3 +228,12 @@ section.success {
 .press img{
   margin: 0 auto;
 }
+
+.home {
+  background-image: url("/img/cabezote.jpg")
+}
+.home .btn-default:hover{
+  color: $btn-primary-color;
+  background-color: $btn-primary-bg;
+  border-color: $btn-primary-border;
+}

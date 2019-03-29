@@ -1,0 +1,21 @@
+.circle-graph{
+  display: inline-block;
+}
+.graph-left {
+}
+.graph-right {
+}
+
+
+.price.in-season {
+  background: $color-season;
+}
+.price.out-season {
+  background: $color-out-season;
+}
+.co2.local {
+  background: $color-co2-local;
+}
+.co2.industrial {
+  background: $color-co2-industrial;
+}

@@ -6,6 +6,7 @@
 // Fonts configuration
 $icon-font-path: "{{site.url}}/css/fonts/bootstrap/";
 $fa-font-path: "{{site.url}}/css/fonts/font-awesome/";
+$img-path: "{{site.url}}/img/";
 
 @import 'config';
 @import 'bootstrap';
@@ -18,4 +19,5 @@ $fa-font-path: "{{site.url}}/css/fonts/font-awesome/";
 @import 'search';
 @import 'product';
 @import 'pages';
+@import 'footprint';
 @import 'responsive';

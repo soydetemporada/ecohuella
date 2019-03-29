@@ -15,28 +15,40 @@
         var product_id = Math.floor(Math.random() * products.length);
         var question = questions[products[product_id]];
         question = question.data[Math.floor(Math.random() * question.data.length)];
-        console.log(question.range);
+
         $('#question').text(question.question);
-        $( "#slider-value" ).text( (question.range[1] - question.range[0])/ 2 );
+        //$( "#slider-value" ).text( (question.range[1] - question.range[0])/ 2 );
+        $( "#slider-value" ).text(question.range[0]);
         $( "#unit" ).text(question.unit);
         $( "#answer" ).html(question.answer);
 
         $("#answer-button").on('click',function(){
           $("#product").show('slow');
         });
-
-        $( "#slider-range-max" ).slider({
-          range: 'max',
-          min: question.range[0],
-          max: question.range[1],
-          value: question.range[0], //(question.range[1] - question.range[0])/ 2,
-          slide: function( event, ui ) {
-            $( "#slider-value" ).text( ui.value );
-          },
-          change:function(event,ui){
-            $("#answer-note").show("slow");
-          }
-        });
+        console.log(question);
+        if(parseInt(question.range[0])){
+          $( "#slider-range-max" ).slider({
+            range: 'max',
+            min: question.range[0],
+            max: question.range[1],
+            value: question.range[0], //(question.range[1] - question.range[0])/ 2,
+            slide: function( event, ui ) {
+              $( "#slider-value" ).text( ui.value );
+            },
+            change:function(event,ui){
+              $("#answer-button").show("slow");
+            }
+          });
+        }
+        else{
+          $("#slider-range-max").append('<button class="btn btn-default" type="button">Temporada</button>&nbsp;&nbsp;');
+          $("#slider-range-max").append('<button class="btn btn-default" type="button">Fuera de Temporada</button>');
+          $('#slider-range-max button').on('click',function(e){
+            $(e.target).toggleClass('btn-primary');
+            $("#answer-button").show("slow");
+          })
+          $('.slider h2').hide();
+        }
       });
     </script>
   </body>

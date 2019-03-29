@@ -3,7 +3,7 @@
   {% assign lang_suffix = "_" | append: site.lang %}
 {% endif %}
 {% assign name_key = "name" | append: lang_suffix %}
-{% assign description_key = "description" | append: lang_suffix %}
+{% assign description_key = "description" | append: lang_suffix%}
 
 <!DOCTYPE html>
 <html>
@@ -14,8 +14,7 @@
     {% assign product_id = page.id | replace: '/products/',''%}
     {% assign product_data = site.data.products[product_id] %}
     <!-- Header -->
-    {% assign cabezote = "/img/products/cabezotes/" | append: product_data.img |
-    replace: 'png', 'jpg' %}
+    {% assign cabezote = "/img/products/cabezotes/" | append: product_data.img | replace: 'png', 'jpg' %}
     <header
       id="product-header-{{page.index}}"
       style="background-image:url('{{ cabezote | prepend: site.url }}')"
@@ -55,110 +54,139 @@
           </ul>
         </div>
 
+
         <div class="row">
-          <div class="col-md-12 production-step">
-            <div style="margin:0 auto;text-align:center">
-              <img
-                src="/img/icons/{{product_id}}-semilla.png"
-                height="128"
-                width="128"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">{%t product.summary %}</h3>
-              </div>
-              <div class="panel-body">{{product_data[description_key]}}</div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">{%t product.growing_time %}</h3>
-              </div>
               <div class="panel-body">
-                <div
-                  class="tiempo-cultivo"
-                  data-time="{{product_data.time}}"
-                ></div>
+                <div class="col-sm-4">
+                  <h3>{{product_data[name_key]}}</h3>
+                  <small>{{product_data[description_key]}}</small>
+                </div>
+                <div class="col-sm-4">
+                  <h3>Emisiones de CO2/Kg</h3>
+                  <small>Impacto ambiental medido en emisiones de CO2 desde que el producto sale del campo y llega a tu plato.</small>
+                </div>
+                <div class="col-sm-4">
+                  <h3>Precio (€/Kg)</h3>
+                  <small>Precio del producto en temporada y fuera de temporada, desde que lo vende el agricultorhasta que llega al consumidor.</small>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
         <div class="row">
-          <div class="col-md-12 production-step">
-            <div style="margin:0 auto;text-align:center">
-              <img
-                src="/img/icons/{{product_id}}-transporte.png"
-                height="128"
-                width="128"
-              />
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <h4>Estado del alimento</h4>
+                  </div>
+                  <div class="col-sm-2">
+                    <h4>Agricultura Local</h4>
+                  </div>
+                  <div class="col-sm-2">
+                    <h4>Agricultura Industrial</h4>
+                  </div>
+                  <div class="col-sm-4" style="text-align:center">
+                    Temporada (Fuera de Temporada)
+                  </div>
+                  </div>
+                  <div class="row">
+                  <div class="col-sm-4">
+                    <img
+                      src="/img/icons/{{product_id}}-semilla.png"
+                      height="128"
+                      width="128"
+                    />
+                  </div>
+                  <div class="col-sm-4" style="text-align:center;">
+                    <div
+                      class="circle-graph graph-left co2 local"
+                      data-value="{{product_data.co2.seed.local}}">{{product_data.co2.seed.local}}</div>
+                    <div
+                      class="circle-graph graph-right co2 industrial"
+                      data-value="{{product_data.co2.seed.industrial}}">{{product_data.co2.seed.industrial}}</div>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <div class="center-block" style="text-align:center;background:#A83232;width:20%;height:150px;color:white;padding-top:12%;">
+                      {{product_data.price.seed.season}} €<br>
+                      ({{product_data.price.seed.outofseason}} €)
+                    </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title">{% t product.top_3 %}</h3>
+                <h3 class="panel-title">Transporte</h3>
               </div>
               <div class="panel-body">
-                <div class="chart"></div>
-                <small class="source">{% t product.source_top %}</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">{% t product.import_export %}</h3>
-              </div>
-              <div class="panel-body">
-                <div class="import-export"></div>
-                <small class="source"
-                  >{% t product.source_import_export %}</small
-                >
+                <div class="row">
+                  <div class="col-sm-4">
+                    <img
+                      src="/img/icons/{{product_id}}-transporte.png"
+                      height="128"
+                      width="128"
+                    />
+                  </div>
+                  <div class="col-sm-4" style="text-align:center;">
+                    <div
+                      class="circle-graph graph-left co2 local"
+                      data-value="{{product_data.co2.seed.local}}"></div>
+                    <div
+                      class="circle-graph graph-right co2 industrial"
+                      data-value="{{product_data.co2.seed.industrial}}"></div>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <div class="center-block" style="text-align:center;background:#A83232;width:45%;height:150px;color:white;padding-top:12%;">
+                      {{product_data.price.production.season}} €<br>
+                      ({{product_data.price.production.outofseason}} €)
+                    </div>
+                </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 production-step">
-            <div style="margin:0 auto;text-align:center">
-              <img
-                src="/img/icons/{{product_id}}-plato.png"
-                height="256"
-                width="256"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
+        <div class="row" style="padding-top:0">
+          <div class="col-md-12">
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title">{% t product.top_3 %}</h3>
+                <h3 class="panel-title">En tu plato</h3>
               </div>
               <div class="panel-body">
-                <div class="chart"></div>
-                <small class="source">{% t product.source_top %}</small>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">{% t product.import_export %}</h3>
-              </div>
-              <div class="panel-body">
-                <div class="import-export"></div>
-                <small class="source"
-                  >{% t product.source_import_export %}</small
-                >
+                <div class="row">
+                  <div class="col-sm-4">
+                    <img
+                      src="/img/icons/{{product_id}}-plato.png"
+                      height="128"
+                      width="128"
+                    />
+                  </div>
+                  <div class="col-sm-4" style="text-align:center;">
+                    <div
+                      class="circle-graph graph-left co2 local"
+                      data-value="{{product_data.co2.seed.local}}"></div>
+                    <div
+                      class="circle-graph graph-right co2 industrial"
+                      data-value="{{product_data.co2.seed.industrial}}"></div>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <div class="center-block" style="text-align:center;background:#A83232;width:60%;height:150px;color:white;padding-top:12%;">
+                      {{product_data.price.plate.season}} €<br>
+                      ({{product_data.price.plate.outofseason}} €)
+                    </div>
+                </div>
               </div>
             </div>
           </div>
@@ -168,17 +196,46 @@
 
     {% include footer.html %} {% include js.html %}
     <script>
+      function updateGraph(target,direction,value){
+        $(target).height(value*2);
+        $(target).width(value);
+
+        switch(direction){
+          case 'right':
+            $(target).css('border-bottom-right-radius',value*2);
+            $(target).css('border-top-right-radius',value*2);
+          break;
+          case 'left':
+            $(target).css('border-bottom-left-radius',value*2);
+            $(target).css('border-top-left-radius',value*2);
+          break;
+        }
+      }
       $(document).ready(function() {
-        graphProduction(
-          ".chart",
-          "{{site.url}}/data/products/{{product_id}}/production/grafico.csv"
-        );
-        graphImportExport(
-          ".import-export",
-          "{{site.url}}/data/products/{{product_id}}/{{product_id}}_import_export_mes.csv"
-        );
-        graphProductionTime(".tiempo-cultivo");
         updateCalendar("{{product_id }}", "{{site.url}}");
+        var co2Scale = d3.scaleSqrt().domain([0,10000]).range([0,250]);
+        var priceScale = d3.scaleSqrt().domain([0,5]).range([0,250]);
+
+        var co2Local = co2Scale(parseFloat($('.co2.local').data('value')));
+        var co2Industrial = co2Scale(parseFloat($('.co2.industrial').data('value')));
+        updateGraph('.co2.local','left',co2Local);
+        updateGraph('.co2.industrial','right',co2Industrial);
+
+        var priceSeason = priceScale(parseFloat($('.price.seed.in-season').data('value')));
+        var priceOutSeason = priceScale(parseFloat($('.price.seed.out-season').data('value')));
+        updateGraph('.price.seed.in-season','left',priceSeason);
+        updateGraph('.price.seed.out-season','right',priceSeason);
+
+        priceSeason = priceScale(parseFloat($('.price.production.in-season').data('value')));
+        priceOutSeason = priceScale(parseFloat($('.price.production.out-season').data('value')));
+        updateGraph('.price.production.in-season','left',priceSeason);
+        updateGraph('.price.production.out-season','right',priceSeason);
+
+        priceSeason = priceScale(parseFloat($('.price.plate.in-season').data('value')));
+        priceOutSeason = priceScale(parseFloat($('.price.plate.out-season').data('value')));
+        updateGraph('.price.plate.in-season','left',priceSeason);
+        updateGraph('.price.plate.out-season','right',priceSeason);
+
       });
     </script>
   </body>

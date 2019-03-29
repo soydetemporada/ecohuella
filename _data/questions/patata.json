@@ -14,7 +14,7 @@
     },
     {
       "question": "¿Cuándo crees que es más barato comprar un kilo de patatas?",
-      "range": [0, 1],
+      "range": ["Temporada", "Fuera de Temporada"],
       "unit": "Temporada",
       "answer": "La PATATA  cuesta 1.06€ en temporada y 1.02€  fuera de temporada. Encontramos una diferencia de 4 céntimos de media, según los datos datos del observatorio de precios del Ministerio de Agricultura del año 2018."
     }

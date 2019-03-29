@@ -15,7 +15,7 @@ global:
 titles:
   calendar: Buscador
   porque: "¿Por qué?"
-  research: "Agricultura familiar: el coste de mantener la tradición y la tierra"
+  research: "Del campo al plato"
   faq: FAQ
   recipes: Recetas
   about: Acerca
@@ -55,6 +55,10 @@ colaborators:
   development: "Programación"
   design: "Diseño UX"
   data_analysis: "Análisis de datos"
+  student: "Estudiante de Periodismo"
+  journalist: "Periodista"
+  divulgation: "Divulgación científica"
+  ilustrator: "Ilustración"
 
 cookies:
   cookie_banner: "Las cookies siempre están de temporada, y este sitio usa dos o tres"
